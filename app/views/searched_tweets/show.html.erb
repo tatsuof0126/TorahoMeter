@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Keyword:</strong>
+  <%= @searched_tweet.keyword_id %>
+</p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @searched_tweet.tweet_id %>
+</p>
+
+<p>
+  <strong>Tweet date:</strong>
+  <%= @searched_tweet.tweet_date %>
+</p>
+
+<p>
+  <strong>Tweet text:</strong>
+  <%= @searched_tweet.tweet_text %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @searched_tweet.user_id %>
+</p>
+
+<p>
+  <strong>User screen name:</strong>
+  <%= @searched_tweet.user_screen_name %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @searched_tweet.user_name %>
+</p>
+
+<p>
+  <strong>Retweet count:</strong>
+  <%= @searched_tweet.retweet_count %>
+</p>
+
+<p>
+  <strong>Favorite count:</strong>
+  <%= @searched_tweet.favorite_count %>
+</p>
+
+<%= link_to 'Edit', edit_searched_tweet_path(@searched_tweet) %> |
+<%= link_to 'Back', searched_tweets_path %>

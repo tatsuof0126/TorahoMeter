@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Keyword:</strong>
+  <%= @search_result.keyword_id %>
+</p>
+
+<p>
+  <strong>Searched date:</strong>
+  <%= @search_result.searched_date %>
+</p>
+
+<p>
+  <strong>Tweet count:</strong>
+  <%= @search_result.tweet_count %>
+</p>
+
+<%= link_to 'Edit', edit_search_result_path(@search_result) %> |
+<%= link_to 'Back', search_results_path %>

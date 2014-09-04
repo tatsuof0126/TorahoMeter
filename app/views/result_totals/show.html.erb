@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Keyword:</strong>
+  <%= @result_total.keyword_id %>
+</p>
+
+<p>
+  <strong>Last searched date:</strong>
+  <%= @result_total.last_searched_date %>
+</p>
+
+<p>
+  <strong>Max tweet:</strong>
+  <%= @result_total.max_tweet_id %>
+</p>
+
+<p>
+  <strong>Total tweet count:</strong>
+  <%= @result_total.total_tweet_count %>
+</p>
+
+<%= link_to 'Edit', edit_result_total_path(@result_total) %> |
+<%= link_to 'Back', result_totals_path %>

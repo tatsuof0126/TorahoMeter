@@ -1,0 +1,29 @@
+<h1>Listing search_results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>Searched date</th>
+      <th>Tweet count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @search_results.each do |search_result| %>
+      <tr>
+        <td><%= search_result.keyword_id %></td>
+        <td><%= search_result.searched_date %></td>
+        <td><%= search_result.tweet_count %></td>
+        <td><%= link_to 'Show', search_result %></td>
+        <td><%= link_to 'Edit', edit_search_result_path(search_result) %></td>
+        <td><%= link_to 'Destroy', search_result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Search result', new_search_result_path %>

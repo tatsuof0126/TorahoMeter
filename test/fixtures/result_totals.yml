@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keyword_id: 1
+  last_searched_date: 2014-09-01 01:09:04
+  max_tweet_id: 1
+  total_tweet_count: 1
+
+two:
+  keyword_id: 1
+  last_searched_date: 2014-09-01 01:09:04
+  max_tweet_id: 1
+  total_tweet_count: 1

@@ -1,0 +1,33 @@
+<%= form_for(@result_total) do |f| %>
+  <% if @result_total.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@result_total.errors.count, "error") %> prohibited this result_total from being saved:</h2>
+
+      <ul>
+      <% @result_total.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :keyword_id %><br>
+    <%= f.number_field :keyword_id %>
+  </div>
+  <div class="field">
+    <%= f.label :last_searched_date %><br>
+    <%= f.datetime_select :last_searched_date %>
+  </div>
+  <div class="field">
+    <%= f.label :max_tweet_id %><br>
+    <%= f.number_field :max_tweet_id %>
+  </div>
+  <div class="field">
+    <%= f.label :total_tweet_count %><br>
+    <%= f.number_field :total_tweet_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

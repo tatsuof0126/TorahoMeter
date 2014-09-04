@@ -1,0 +1,53 @@
+<%= form_for(@searched_tweet) do |f| %>
+  <% if @searched_tweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@searched_tweet.errors.count, "error") %> prohibited this searched_tweet from being saved:</h2>
+
+      <ul>
+      <% @searched_tweet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :keyword_id %><br>
+    <%= f.number_field :keyword_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tweet_id %><br>
+    <%= f.number_field :tweet_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tweet_date %><br>
+    <%= f.datetime_select :tweet_date %>
+  </div>
+  <div class="field">
+    <%= f.label :tweet_text %><br>
+    <%= f.text_field :tweet_text %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_screen_name %><br>
+    <%= f.text_field :user_screen_name %>
+  </div>
+  <div class="field">
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :retweet_count %><br>
+    <%= f.number_field :retweet_count %>
+  </div>
+  <div class="field">
+    <%= f.label :favorite_count %><br>
+    <%= f.number_field :favorite_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

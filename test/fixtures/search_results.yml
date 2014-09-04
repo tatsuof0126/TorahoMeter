@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keyword_id: 1
+  searched_date: 2014-09-04 23:30:34
+  tweet_count: 1
+
+two:
+  keyword_id: 1
+  searched_date: 2014-09-04 23:30:34
+  tweet_count: 1

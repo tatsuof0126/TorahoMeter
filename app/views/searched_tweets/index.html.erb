@@ -1,0 +1,41 @@
+<h1>Listing searched_tweets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>Tweet</th>
+      <th>Tweet date</th>
+      <th>Tweet text</th>
+      <th>User</th>
+      <th>User screen name</th>
+      <th>User name</th>
+      <th>Retweet count</th>
+      <th>Favorite count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @searched_tweets.each do |searched_tweet| %>
+      <tr>
+        <td><%= searched_tweet.keyword_id %></td>
+        <td><%= searched_tweet.tweet_id %></td>
+        <td><%= searched_tweet.tweet_date %></td>
+        <td><%= searched_tweet.tweet_text %></td>
+        <td><%= searched_tweet.user_id %></td>
+        <td><%= searched_tweet.user_screen_name %></td>
+        <td><%= searched_tweet.user_name %></td>
+        <td><%= searched_tweet.retweet_count %></td>
+        <td><%= searched_tweet.favorite_count %></td>
+        <td><%= link_to 'Show', searched_tweet %></td>
+        <td><%= link_to 'Edit', edit_searched_tweet_path(searched_tweet) %></td>
+        <td><%= link_to 'Destroy', searched_tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Searched tweet', new_searched_tweet_path %>
