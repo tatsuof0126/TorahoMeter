@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 
 # add fujiwara
 gem 'twitter'
+gem "therubyracer"
 
 
 # Use ActiveModel has_secure_password
