@@ -31,6 +31,7 @@ gem 'spring',        group: :development
 gem 'twitter'
 gem "therubyracer"
 
+gem "chartkick"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

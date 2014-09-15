@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'standard' => 'show#standard'
+
   get 'search' => 'search#search'
+
   get 'delete_old_tweets' => 'searched_tweets#delete_old_tweets'
 
   resources :search_results
